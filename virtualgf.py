@@ -25,6 +25,7 @@ base_url = os.getenv("BASE_URL")
 client = OpenAI(
     base_url=base_url,
     api_key=novita_api_key,
+    default_headers={"HTTP-Referer": "https://openrouter.ai"}
 )
 
 # Model to be used for generating responses
