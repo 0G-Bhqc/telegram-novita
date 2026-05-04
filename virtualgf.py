@@ -28,7 +28,7 @@ client = OpenAI(
 )
 
 # Model to be used for generating responses
-model = "meta-llama/llama-3.1-405b-instruct"
+model = "cognitivecomputations/dolphin-mistral-24b-venice-edition:free"
 
 user_name = ""  # Placeholder for storing the user's name
 
