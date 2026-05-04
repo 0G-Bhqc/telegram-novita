@@ -10,6 +10,7 @@ from telegram.ext import (
 import os
 from dotenv import load_dotenv
 from openai import OpenAI
+import httpx
 import datetime
 import json
 
@@ -22,10 +23,14 @@ novita_api_key = os.getenv("NOVITA_API_KEY")
 base_url = os.getenv("BASE_URL")
 
 # Initialize OpenAI client with base URL and Novita API key
+http_client = httpx.Client(
+    headers={"HTTP-Referer": "https://openrouter.ai"}
+)
+
 client = OpenAI(
     base_url=base_url,
     api_key=novita_api_key,
-    default_headers={"HTTP-Referer": "https://openrouter.ai"}
+    http_client=http_client,
 )
 
 # Model to be used for generating responses
