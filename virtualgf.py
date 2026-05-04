@@ -25,10 +25,11 @@ base_url = os.getenv("BASE_URL")
 client = OpenAI(
     base_url=base_url,
     api_key=novita_api_key,
+    default_headers={"HTTP-Referer": "https://openrouter.ai"}
 )
 
 # Model to be used for generating responses
-model = "meta-llama/llama-3.1-405b-instruct"
+model = "cognitivecomputations/dolphin-mistral-24b-venice-edition:free"
 
 user_name = ""  # Placeholder for storing the user's name
 
