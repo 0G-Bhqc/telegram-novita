@@ -34,7 +34,7 @@ client = OpenAI(
 )
 
 # Model to be used for generating responses
-model = "cognitivecomputations/dolphin-mistral-24b-venice-edition:free"
+model = "minimax/minimax-m2.5:free"
 
 user_name = ""  # Placeholder for storing the user's name
 
